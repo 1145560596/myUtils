@@ -1,0 +1,10 @@
+spring:
+    profiles:
+        active: local
+    application:
+        name: utils
+
+server:
+    port: 9300
+    servlet:
+        context-path: /${spring.application.name}

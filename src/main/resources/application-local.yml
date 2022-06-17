@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rm-bp1cjiazfe8207a61o.mysql.rds.aliyuncs.com:3306/volunteer?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+    username: root
+    password: Hello1234!
+    driverClassName: com.mysql.jdbc.Driver
+    tomcat:
+      initialSize: 10
+      maxActive: 300
+      minIdle: 10
+      maxIdle: 20
+      testWhileIdle: true
+      testOnBorrow: true
+      validationQuery: SELECT 1
+      validationInterval: 30000
+      validationQueryTimeout: 5
+      timeBetweenEvictionRunsMillis: 1800000
+      maxWait: 10000
+      removeAbandonedTimeout: 60
+      minEvictableIdleTimeMillis: 30000
+      initSQL: set names utf8mb4
+      maxAge: 14400000
+
+swagger:
+  enabled: true
+  basePackage: com.atme
+  excludePaths: /manage/**,/error
+  version: 1.0
+  description: 工具类
+  dockets:
+    poseidon:
+      title: 后台管理接口
+      excludePaths: /utils/**
+
