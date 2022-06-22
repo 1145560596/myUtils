@@ -1,4 +1,4 @@
-package com.atme.utils.swagger;
+package com.atme.utils.my.swagger;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,9 +1,7 @@
-package com.atme.utils.use;
+package com.atme.utils.my.result;
 
 
-import com.atme.utils.result.EnumMsg;
-import com.atme.utils.result.Result;
-import com.atme.utils.result.exception.BaseException;
+import com.atme.utils.my.result.exception.BaseException;
 
 /**
  * api结果工具类.

@@ -1,4 +1,4 @@
-package com.atme.utils.mybatis;
+package com.atme.utils.my.mybatisPLUS;
 
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.extension.injector.LogicSqlInjector;

@@ -1,7 +1,7 @@
-package com.atme.utils.result.exception;
+package com.atme.utils.my.result.exception;
 
 
-import com.atme.utils.result.EnumMsg;
+import com.atme.utils.my.result.EnumMsg;
 
 /**
  * 基础异常.
@@ -15,6 +15,8 @@ public class BaseException extends RuntimeException {
     private static final long serialVersionUID = 3565011388045342796L;
 
     private int status;
+
+    private Object data=null;
 
     private Object[] args;
 
@@ -39,6 +41,11 @@ public class BaseException extends RuntimeException {
         super(message, cause);
         this.status = status;
     }
+    public BaseException(Object data,int status,String message) {
+        super(message);
+        this.data=data;
+        this.status = status;
+    }
 
     public BaseException(EnumMsg<Integer> resultCode) {
         this(resultCode.getCode(), resultCode.getMsg());
@@ -46,6 +53,10 @@ public class BaseException extends RuntimeException {
 
     public int getStatus() {
         return status;
+    }
+
+    public Object getData() {
+        return data;
     }
 
     public void setStatus(int status) {

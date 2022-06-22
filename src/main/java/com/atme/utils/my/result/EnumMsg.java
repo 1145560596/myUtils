@@ -1,4 +1,4 @@
-package com.atme.utils.result;
+package com.atme.utils.my.result;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;

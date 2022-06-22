@@ -1,10 +1,9 @@
-package com.atme.utils.result;
+package com.atme.utils.my.result;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.poi.ss.formula.functions.T;
 
 /**
  * @author amao

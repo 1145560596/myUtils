@@ -1,4 +1,4 @@
-package com.atme.utils.result;
+package com.atme.utils.my.result.exception;
 
 /**
  * 枚举码.

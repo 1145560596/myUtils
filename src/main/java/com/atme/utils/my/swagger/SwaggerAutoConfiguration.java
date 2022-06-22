@@ -1,4 +1,4 @@
-package com.atme.utils.swagger;
+package com.atme.utils.my.swagger;
 
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
