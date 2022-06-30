@@ -33,6 +33,16 @@ public class OssServiceImpl implements OssService {
     @Autowired
     private OssProperties ossProperties;
 
+    @Override
+    public String getPreFix(String fileName) {
+        return ossProperties.getDomainName().concat(fileName);
+    }
+
+    //项目名 + uuid + 文件后缀名
+    private String genFileName(String originFileName) {
+        return ossProperties.getFilePath() + StringUtils.remove(UUID.randomUUID().toString(), "-")
+                + StringUtils.substring(originFileName, originFileName.lastIndexOf("."));
+    }
 
     @Override
     public String upload(MultipartFile file) throws Exception {
@@ -45,11 +55,6 @@ public class OssServiceImpl implements OssService {
         ossClient.putObject(ossProperties.getBucketName(), fileName, in, meta);
         log.info("{},{},{}",ossProperties.getBucketName(), fileName, meta);
         return fileName;
-    }
-
-    @Override
-    public String getPreFix(String fileName) {
-        return ossProperties.getDomainName().concat(fileName);
     }
 
     @Override
@@ -68,9 +73,4 @@ public class OssServiceImpl implements OssService {
         }
     }
 
-    //项目名 + uuid + 文件后缀名
-    private String genFileName(String originFileName) {
-        return ossProperties.getFilePath() + StringUtils.remove(UUID.randomUUID().toString(), "-")
-                + StringUtils.substring(originFileName, originFileName.lastIndexOf("."));
-    }
 }

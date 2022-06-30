@@ -25,11 +25,4 @@ public class OssConfiguration {
         return new OSSClient(ossProperties.getEndPoint(), ossProperties.getAccessKeyId(), ossProperties.getAccessKeySecret());
     }
 
-/*    @Bean
-    public MultipartConfigElement multipartConfigElement() {
-        MultipartConfigFactory factory = new MultipartConfigFactory();
-        factory.setMaxRequestSize("1000Mb");
-        factory.setMaxFileSize("1000Mb");
-        return factory.createMultipartConfig();
-    }*/
 }

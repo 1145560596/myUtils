@@ -32,3 +32,10 @@ swagger:
       title: 后台管理接口
       excludePaths: /utils/**
 
+oss:
+  accessKeyId: LTAI4G4g9RT8LRaSvukKAB1u
+  accessKeySecret: jLoVtCggYfkAbKQoSlMtprpFSBMAAW
+  bucketName: my-test1234
+  endPoint: oss-cn-hangzhou.aliyuncs.com
+  filePath: ${spring.application.name}/
+  domainName: my-test1234.oss-cn-hangzhou.aliyuncs.com
